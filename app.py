@@ -12,7 +12,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-  input_features = [int(x) for x in request.form.values()]
+  input_features = [float(x) for x in request.form.values()]
   features_value = [np.array(input_features)]
 
   features_name = ['radius_mean', 'texture_mean', 'perimeter_mean',
