@@ -51,6 +51,29 @@
     .form-group {
       padding: 2px;
     }
+
+    @media (max-width: 768px){
+      .boxWidth{
+        width: 100% !important;
+      }
+      .container h4 {
+        margin-top: 10px !important;
+      }
+      .form-group label {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      .form-group input {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      .predictButton{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+
   </style>
   <!--Font Awesome-->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -76,11 +99,11 @@
 
           <!-- Main Input For Receiving Query to our ML -->
           <form action="{{ url_for('predict')}}" method="post" class="form-inline">
-            <div class="row">
-              <div class="col-md-6">
+            <div class="col-md-12 row">
+              <div class="col-md-6 boxWidth">
                 <img class="image" src="{{url_for('static', filename='img.jpeg')}}" width="100%" height="100%" />
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 boxWidth">
                 <div class="container">
                   <h4>Enter Cell Details</h4>
                   <div class="form-group">
@@ -126,7 +149,7 @@
                   </div>
 
 
-                  <button type="submit" class="btn btn-primary btn-lg">Predict Cancer</button>
+                  <button type="submit" class="btn btn-primary btn-lg predictButton">Predict Cancer</button>
                 </div>
               </div>
             </div>
