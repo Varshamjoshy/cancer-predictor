@@ -4,7 +4,10 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
+
+# Load the model and scaler
 model = pickle.load(open('model.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -20,7 +23,12 @@ def predict():
        'concavity_mean', 'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean']
 
   df = pd.DataFrame(features_value, columns=features_name)
-  output = model.predict(df)
+
+  # Apply the scaler transformation
+  scaled_features = scaler.transform(df)
+
+  # Make prediction
+  output = model.predict(scaled_features)
 
   if int(output) == 1:
       res_val = "Breast cancer"
