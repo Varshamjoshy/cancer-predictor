@@ -31,12 +31,12 @@ def predict():
   output = model.predict(scaled_features)
 
   if int(output) == 1:
-      res_val = "Breast cancer"
+      res_val = "malignant"
   else:
-      res_val = "no Breast cancer"
+      res_val = "benign"
 
 
-  return render_template('index.html', prediction_text='Patient has {}'.format(res_val))
+  return render_template('index.html', prediction_text='The tumor is {}'.format(res_val))
 
 if __name__ == "__main__":
   app.run()

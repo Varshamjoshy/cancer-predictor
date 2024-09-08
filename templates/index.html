@@ -11,8 +11,10 @@
     /*just bg and body style*/
     body {
       margin: 40px;
-      background-color: #808080;
-      background-image: linear-gradient(315deg, #de5499 19%, #a0c5ba 85%);
+      background-color: rgb(233,192,199);
+      /* #808080; */
+      background-image: linear-gradient(144deg, rgba(233,192,199,1) 0%, rgba(255,114,172,1) 71%, rgba(194,91,152,1) 98%);
+      /* linear-gradient(315deg, #de5499 19%, #a0c5ba 85%); */
     }
 
     .container {
@@ -90,7 +92,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="head">Breast Cancer Detection</h1>
+        <h1 class="head">Breast Tumor Diagnosis</h1>
       </div>
     </div>
     <div class="row">
@@ -107,49 +109,49 @@
                 <div class="container">
                   <h4>Enter Cell Details</h4>
                   <div class="form-group">
-                    <label for="radius_mean">Radius mean </label>
+                    <label for="radius_mean">Radius </label>
                     <input type="number" class="form-control" name="radius_mean" required="required" step="any">
                   </div>
                   <div class="form-group">
-                    <label for="texture_mean">Texture mean</label>
+                    <label for="texture_mean">Texture </label>
                     <input type="number" class="form-control" name="texture_mean" required="required" step="any">
                   </div>
                   <div class="form-group">
-                    <label for="perimeter_mean">Perimeter mean</label>
+                    <label for="perimeter_mean">Perimeter </label>
                     <input type="number" class="form-control" name="perimeter_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="area_mean">Area mean</label>
+                    <label for="area_mean">Area </label>
                     <input type="number" class="form-control" name="area_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="smoothness_mean">Smoothness mean</label>
+                    <label for="smoothness_mean">Smoothness </label>
                     <input type="number" class="form-control" name="smoothness_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="compactness_mean">Compactness mean</label>
+                    <label for="compactness_mean">Compactness </label>
                     <input type="number" class="form-control" name="compactness_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="concavity_mean">Concavity mean</label>
+                    <label for="concavity_mean">Concavity </label>
                     <input type="number" class="form-control" name="concavity_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="concave points_mean	">Concave points mean</label>
+                    <label for="concave points_mean	">Concave points </label>
                     <input type="number" class="form-control" name="concave points_mean	" required="required" step="any"/>
                   </div>
 
                   <div class="form-group">
-                    <label for="symmetry_mean">Symmetry mean</label>
+                    <label for="symmetry_mean">Symmetry </label>
                     <input type="number" class="form-control" name="symmetry_mean" required="required" step="any"/>
                   </div>
                   <div class="form-group">
-                    <label for="fractal_dimension_mean">Fractal dimension mean</label>
+                    <label for="fractal_dimension_mean">Fractal dimension </label>
                     <input type="number" class="form-control" name="fractal_dimension_mean" required="required" step="any"/>
                   </div>
 
 
-                  <button type="submit" class="btn btn-primary btn-lg predictButton">Predict Cancer</button>
+                  <button type="submit" class="btn btn-primary btn-lg predictButton">Predict Tumor</button>
                 </div>
               </div>
             </div>
